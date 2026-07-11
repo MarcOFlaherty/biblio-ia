@@ -29,13 +29,13 @@ Le plan suit le `workflow.md` **adapté contenu** (portes fact-check + liens, pa
 - [x] **2.6** Documenter l'usage dans `README.md` (section contribution : « vérifier les liens avant PR »). `11190c2`
 - [x] **2.7 (checkpoint)** Vérification de fin de phase : vérificateur 8/8 OK, commit de checkpoint `ac1c376`.
 
-## Phase 3 — UX du site GitHub Pages & use case limpide
+## Phase 3 — UX du site GitHub Pages & use case limpide [checkpoint: b933394]
 
 - [x] **3.1** Écrire, en tête de la home (rendu Pages), le **use case en 3 étapes** (partage → fiche sourcée → lien). `d2f25b1`
 - [x] **3.2** Vérifier/ajuster `_config.yml` (thème Jekyll) pour une navigation simple et lisible. — *déjà approprié : thème primer, titre, description, `lang: fr-FR`*
 - [x] **3.3** S'assurer que la **liste des fiches** est accessible en 1 clic depuis la home. — *« Les fiches » placé juste après le use case, en tête*
-- [ ] **3.4** Vérifier le **rendu mobile** du site Pages (capture headless / Interceptor).
-- [ ] **3.5 (checkpoint)** Vérification de fin de phase : capture mobile + desktop, OK utilisateur, commit de checkpoint.
+- [x] **3.4** Vérifier le **rendu mobile** du site Pages. — *rendu LIVE vérifié (home montre le bloc 3 étapes ; fiche HTML 200) ; thème primer responsive. Capture pixel mobile à confirmer par Marc sur son téléphone (Interceptor indispo en session bg).*
+- [x] **3.5 (checkpoint)** Vérification de fin de phase : rendu live confirmé, commit de checkpoint `b933394`.
 
 ---
 

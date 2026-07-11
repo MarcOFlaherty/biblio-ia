@@ -2,8 +2,8 @@
 project: biblio-ia
 task: Choisir un format de partage et scaffolder la bibliothèque IA open-source
 effort: E3
-phase: build
-progress: 0/12
+phase: complete
+progress: 14/14
 mode: algorithm
 started: 2026-07-11
 updated: 2026-07-11
@@ -111,3 +111,22 @@ réellement** (`bun run build` vert).
 - 2026-07-11 — **Fiche d'amorce = brouillon honnête** : les faits juillet 2026 ne sont PAS
   vérifiables de mémoire ; ils sont marqués « à vérifier » avec sources `[à sourcer]` plutôt que
   de reproduire les sources possiblement hallucinées de Gemini (mémoire « vérifier avant d'affirmer »).
+- 2026-07-11 — **refined: pivot VitePress → Astro Starlight** après recadrage de Marc (prototype,
+  solo, Obsidian-friendly, structurer sans se prendre la tête). Raison décisive : Starlight
+  remplit la nav « Fiches » automatiquement (0 config par fiche) et offre badges/encadrés natifs
+  pour les niveaux de confiance. Marc a aussi confirmé que la règle bun/TS « jamais Python » est un
+  artefact du scaffolder public, sans portée ici → Starlight tient sur ses mérites, pas pour éviter Python.
+- 2026-07-11 — **Contribution web (CMS/OAuth/DB) écartée pour l'instant** : sur-ingénierie d'un
+  prototype possiblement mort-né. Modèle retenu : solo-curateur, ouvrable plus tard sans réécriture.
+
+## Verification
+
+- ISC-1..10 — Read/Grep : tous les fichiers présents et conformes (package.json, astro.config.mjs,
+  content.config.ts, index/contribuer/modele-fiche, fiche d'amorce, deploy.yml, README).
+- ISC-11 — `bun install` : exit 0, 393 paquets (Astro 5.18.2, Starlight 0.32.6).
+- ISC-12 — `bun run build` : exit 0, « 6 page(s) built », index Pagefind généré, `dist/` peuplé.
+- ISC-13 — Anti OK : la fiche d'amorce marque les 6 faits juillet 2026 en « ⛔ à vérifier »,
+  sources `[à sourcer]` (aucune source hallucinée reproduite).
+- ISC-14 — Anti OK : 0 fichier Python, 0 `npx`/`npm run` dans le dépôt (toolchain bun).
+- Note : `phase: complete` = livrable scaffold vérifié ; le **contenu** de la fiche reste à sourcer
+  (prochaine étape : skill Research).

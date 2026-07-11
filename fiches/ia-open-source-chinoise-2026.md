@@ -1,7 +1,6 @@
 # La « fin » de l'IA open source chinoise ?
 
-> [!WARNING]
-> **Brouillon — à vérifier avant diffusion.** La plupart des faits ci-dessous portent sur
+> ⚠️ **Brouillon — à vérifier avant diffusion.** La plupart des faits ci-dessous portent sur
 > **juillet 2026** et ne sont **pas encore vérifiés** avec des sources primaires (marqués ⛔).
 > Ne pas diffuser comme des faits établis. Prochaine étape : sourcer chaque ligne.
 

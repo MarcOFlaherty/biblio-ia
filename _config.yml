@@ -1,0 +1,6 @@
+# GitHub Pages — rendu site automatique (Jekyll intégré, aucun build local).
+# Le README devient la page d'accueil ; les fiches Markdown sont rendues avec le thème.
+theme: jekyll-theme-primer
+title: Biblio IA
+description: Veille et fact-checking IA — chaque affirmation avec sa source et son niveau de confiance.
+lang: fr-FR

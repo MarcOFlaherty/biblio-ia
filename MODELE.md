@@ -6,8 +6,7 @@ Copie le bloc ci-dessous dans un nouveau fichier `fiches/mon-sujet.md`
 ````markdown
 # [Titre court de la fiche]
 
-> [!WARNING]
-> **Brouillon — à vérifier.** Retire cet encadré quand la fiche est solide et sourcée.
+> ⚠️ **Brouillon — à vérifier.** Retire cet encadré quand la fiche est solide et sourcée.
 
 ## La question
 [La question à laquelle la fiche répond, en une ligne.]

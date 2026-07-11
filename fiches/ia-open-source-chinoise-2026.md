@@ -1,3 +1,9 @@
+---
+title: La « fin » de l'IA open source chinoise ?
+parent: Fiches
+nav_order: 1
+---
+
 # La « fin » de l'IA open source chinoise ?
 
 > ✅ **Fiche vérifiée le 2026-07-11.** Chaque affirmation a été recoupée sur une source publique

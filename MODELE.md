@@ -1,7 +1,13 @@
+---
+title: Modèle de fiche
+nav_order: 4
+---
+
 # Modèle de fiche
 
 Copie le bloc ci-dessous dans un nouveau fichier `fiches/mon-sujet.md` (nom en
-minuscules-avec-tirets), puis remplace le contenu entre crochets. Toutes les sections marquées
+minuscules-avec-tirets), remplace le contenu entre crochets, puis **ajoute la fiche à la liste de
+[`fiches.md`](fiches.md)**. Toutes les sections marquées
 *(optionnel)* se retirent si elles ne servent pas — une fiche courte reste une bonne fiche.
 
 **Avant de publier**, vérifie : chaque affirmation a une **source** ou un **tag** ; chaque **lien
@@ -10,6 +16,12 @@ première occurrence (MOFCOM, NDRC, NPU…) ; source **primaire** (doc/acteur d'
 la **presse** (secondaire). Voir les règles du [`README`](README.md).
 
 ````markdown
+---
+title: [Titre court de la fiche]
+parent: Fiches
+nav_order: [numéro d'ordre dans la liste des fiches]
+---
+
 # [Titre court de la fiche — de préférence une question]
 
 > ⚠️ **Brouillon — à vérifier.** Retire cet encadré quand la fiche est solide et sourcée.

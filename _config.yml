@@ -1,6 +1,37 @@
-# GitHub Pages — rendu site automatique (Jekyll intégré, aucun build local).
-# Le README devient la page d'accueil ; les fiches Markdown sont rendues avec le thème.
-theme: jekyll-theme-primer
+# GitHub Pages — site généré côté serveur (Jekyll + remote_theme, AUCUN build local).
 title: Biblio IA
 description: Veille et fact-checking IA — chaque affirmation avec sa source et son niveau de confiance.
 lang: fr-FR
+
+# Thème documentaire : nav latérale + recherche. Épinglé pour éviter les surprises de build.
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+plugins:
+  - jekyll-remote-theme
+
+# --- Réglages just-the-docs ---
+search_enabled: true
+heading_anchors: true
+color_scheme: light
+
+# Lien "dépôt" en haut à droite
+aux_links:
+  "Dépôt GitHub":
+    - "https://github.com/mofy-scpo/biblio-ia"
+aux_links_new_tab: true
+
+# Bouton "corriger cette page sur GitHub" en bas de chaque page (garde le réflexe crayon)
+gh_edit_link: true
+gh_edit_link_text: "✏️ Corriger cette page sur GitHub"
+gh_edit_repository: "https://github.com/mofy-scpo/biblio-ia"
+gh_edit_branch: "main"
+gh_edit_view_mode: "edit"
+
+footer_content: "Contenu sous CC BY 4.0 — Biblio IA (prototype)."
+
+# Ne pas publier la tuyauterie interne comme pages du site
+exclude:
+  - conductor/
+  - tools/
+  - README.md
+  - .gitignore
+  - public/

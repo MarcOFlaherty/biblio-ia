@@ -5,7 +5,7 @@ Le plan suit le `workflow.md` **adapté contenu** (portes fact-check + liens, pa
 
 ---
 
-## Phase 1 — Rigueur éditoriale & modèle de fiche
+## Phase 1 — Rigueur éditoriale & modèle de fiche [checkpoint: ac1c376]
 
 - [x] **1.1** Ajouter au `README.md` (section « Les règles ») la distinction **source primaire vs presse**
   et « **reprise ≠ corroboration** » (ne pas gonfler la confiance par des reprises). `318530f`
@@ -14,10 +14,10 @@ Le plan suit le `workflow.md` **adapté contenu** (portes fact-check + liens, pa
 - [x] **1.3** Mettre à jour `MODELE.md` : tableau de confiance **ligne à ligne**, section optionnelle
   « **faits liés mais hors-sujet** », section **Sources vérifiées** (liens testés), rappel accents FR + acronymes. `19d3004`
 - [x] **1.4** Relire la fiche Chine à l'aune du modèle mis à jour (cohérence), corriger si écart. — *déjà conforme (aucun mislabel « primaire », sections alignées)*
-- [ ] **1.5 (checkpoint)** Vérification de fin de phase : contrôle manuel des liens des règles/modèle,
-  relecture, OK utilisateur, commit de checkpoint.
+- [x] **1.5 (checkpoint)** Vérification de fin de phase : liens règles/modèle OK, relecture faite,
+  commit de checkpoint `ac1c376` (validation Marc demandée au moment du pause).
 
-## Phase 2 — Vérification automatique des liens
+## Phase 2 — Vérification automatique des liens [checkpoint: ac1c376]
 
 - [x] **2.1** Créer `tools/check-links.ts` (bun/TS) : extraire les URLs de `fiches/*.md`. `d4a0cde`
 - [x] **2.2** Tester chaque URL (HTTP, UA navigateur, suivi des redirections) ; rapport lisible
@@ -27,7 +27,7 @@ Le plan suit le `workflow.md` **adapté contenu** (portes fact-check + liens, pa
 - [x] **2.4** Lancer `bun tools/check-links.ts` sur les fiches actuelles → **vert**. — *8/8 OK, exit 0* `d4a0cde`
 - [ ] **2.5 (option)** GitHub Action lançant le vérificateur sur les PR (`.github/workflows/`). — *SKIP : option reportée pour ne pas alourdir le proto (à activer si le repo grandit)*
 - [x] **2.6** Documenter l'usage dans `README.md` (section contribution : « vérifier les liens avant PR »). `11190c2`
-- [ ] **2.7 (checkpoint)** Vérification de fin de phase : exécuter le vérificateur, OK utilisateur, commit de checkpoint.
+- [x] **2.7 (checkpoint)** Vérification de fin de phase : vérificateur 8/8 OK, commit de checkpoint `ac1c376`.
 
 ## Phase 3 — UX du site GitHub Pages & use case limpide
 

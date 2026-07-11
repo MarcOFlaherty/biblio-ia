@@ -9,8 +9,8 @@ nav_order: 1
 Veille et **fact-checking** sur l'IA — chaque affirmation avec sa **source** et son **niveau de confiance**. L'antidote au « une IA a dit que… ».
 {: .fs-6 .fw-300 }
 
-[Parcourir les fiches]({% link fiches.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Les règles]({% link regles.md %}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Parcourir les fiches]({{ '/fiches.html' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Les règles]({{ '/regles.html' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 

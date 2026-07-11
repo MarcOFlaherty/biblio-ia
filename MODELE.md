@@ -7,7 +7,7 @@ nav_order: 4
 
 Copie le bloc ci-dessous dans un nouveau fichier `fiches/mon-sujet.md` (nom en
 minuscules-avec-tirets), remplace le contenu entre crochets, puis **ajoute la fiche à la liste de
-[`fiches.md`](fiches.md)**. Toutes les sections marquées
+[`fiches.md`]({{ '/fiches.html' | relative_url }})**. Toutes les sections marquées
 *(optionnel)* se retirent si elles ne servent pas — une fiche courte reste une bonne fiche.
 
 **Avant de publier**, vérifie : chaque affirmation a une **source** ou un **tag** ; chaque **lien

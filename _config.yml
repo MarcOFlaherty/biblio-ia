@@ -3,6 +3,11 @@ title: Biblio IA
 description: Veille et fact-checking IA — chaque affirmation avec sa source et son niveau de confiance.
 lang: fr-FR
 
+# Site PROJET GitHub Pages → l'URL a un préfixe /biblio-ia. Indispensable pour que les liens
+# (relative_url) pointent au bon endroit et ne renvoient pas de 404.
+url: "https://mofy-scpo.github.io"
+baseurl: "/biblio-ia"
+
 # Thème documentaire : nav latérale + recherche. Épinglé pour éviter les surprises de build.
 remote_theme: just-the-docs/just-the-docs@v0.12.0
 plugins:

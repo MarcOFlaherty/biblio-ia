@@ -18,8 +18,8 @@
 ## Outillage (léger, si besoin prouvé)
 
 - **Bun + TypeScript** pour les scripts utilitaires (jamais npm/npx, jamais Python ici).
-  - Cas prévu : **vérificateur de liens** (`tools/check-links.ts`) — extrait les URLs des fiches et
-    teste qu'elles résolvent (HTTP 200), au service de la règle « aucun lien mort ».
+  - **En place** : **vérificateur de liens** (`tools/check-links.ts`) — extrait les URLs des fiches et
+    teste qu'elles résolvent (HTTP 200), au service de la règle « aucun lien mort ». Usage : `bun tools/check-links.ts`.
 - **GitHub Actions** (optionnel) pour lancer le vérificateur de liens sur les PR.
 
 ## Explicitement hors-stack

@@ -51,9 +51,9 @@ $card-border: #e2e8f0;
   tbody tr:nth-child(even) td { background: $card-bg; }
 }
 
-// --- Liste des fiches en "cartes" (ciblée par le wrapper .fiches-cards de fiches.md) ---
-.fiches-cards ul { list-style: none; padding-left: 0; margin-top: 1rem; }
-.fiches-cards li {
+// --- Listes en "cartes" (wrapper .cards sur les pages Actualités et Ressources) ---
+.cards ul { list-style: none; padding-left: 0; margin-top: 1rem; }
+.cards li {
   background: #fff;
   border: 1px solid $card-border;
   border-left: 4px solid $accent;

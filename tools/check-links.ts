@@ -4,7 +4,7 @@
  *
  * Usage :  bun tools/check-links.ts
  *
- * Extrait toutes les URLs de `fiches/*.md` et vérifie qu'elles résolvent (HTTP 2xx/3xx).
+ * Extrait toutes les URLs de `fiches/*.md` et `ressources/*.md`, et vérifie qu'elles résolvent (HTTP 2xx/3xx).
  * Sort avec un code ≠ 0 s'il existe un lien MORT — au service de la règle « aucun lien mort ».
  *
  * Les hôtes connus pour bloquer les robots (403/451) ne sont PAS comptés comme morts :
@@ -14,7 +14,7 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-const FICHES_DIR = 'fiches';
+const CONTENT_DIRS = ['fiches', 'ressources'];
 const TIMEOUT_MS = 20_000;
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
@@ -36,16 +36,22 @@ const URL_RE = /https?:\/\/[^\s<>()\[\]"'`]+/g;
 type Result = { url: string; fiche: string; status: string; ok: boolean; manual: boolean };
 
 function collectUrls(): Map<string, string> {
-  const map = new Map<string, string>(); // url -> première fiche où on la voit
-  if (!existsSync(FICHES_DIR)) {
-    console.error(`Dossier « ${FICHES_DIR}/ » introuvable — lance ce script depuis la racine du repo.`);
+  const map = new Map<string, string>(); // url -> premier fichier où on la voit
+  const dirs = CONTENT_DIRS.filter((d) => existsSync(d));
+  if (dirs.length === 0) {
+    console.error(
+      `Aucun dossier de contenu (${CONTENT_DIRS.join(', ')}) — lance ce script depuis la racine du repo.`,
+    );
     process.exit(2);
   }
-  for (const f of readdirSync(FICHES_DIR).filter((f) => f.endsWith('.md'))) {
-    const text = readFileSync(join(FICHES_DIR, f), 'utf8');
-    for (const m of text.matchAll(URL_RE)) {
-      const url = m[0].replace(/[.,;:!?]+$/, ''); // ponctuation finale
-      if (!map.has(url)) map.set(url, f);
+  for (const dir of dirs) {
+    for (const f of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
+      const rel = join(dir, f);
+      const text = readFileSync(rel, 'utf8');
+      for (const m of text.matchAll(URL_RE)) {
+        const url = m[0].replace(/[.,;:!?]+$/, ''); // ponctuation finale
+        if (!map.has(url)) map.set(url, rel);
+      }
     }
   }
   return map;
@@ -85,7 +91,7 @@ if (urls.size === 0) {
   process.exit(0);
 }
 
-console.log(`🔗 Vérification de ${urls.size} lien(s) dans fiches/…\n`);
+console.log(`🔗 Vérification de ${urls.size} lien(s) dans les contenus…\n`);
 const results: Result[] = [];
 for (const [url, fiche] of urls) {
   const { status, ok } = await check(url);

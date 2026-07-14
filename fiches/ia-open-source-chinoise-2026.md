@@ -1,6 +1,6 @@
 ---
 title: La « fin » de l'IA open source chinoise ?
-parent: Fiches
+parent: Actualités
 nav_order: 1
 ---
 

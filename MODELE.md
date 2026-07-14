@@ -1,73 +1,104 @@
 ---
-title: Modèle de fiche
-nav_order: 4
+title: Modèles
+nav_order: 5
 ---
 
-# Modèle de fiche
+# Modèles de contenu
 
-Copie le bloc ci-dessous dans un nouveau fichier `fiches/mon-sujet.md` (nom en
-minuscules-avec-tirets), remplace le contenu entre crochets, puis **ajoute la fiche à la liste de
-[`fiches.md`]({{ '/fiches.html' | relative_url }})**. Toutes les sections marquées
-*(optionnel)* se retirent si elles ne servent pas — une fiche courte reste une bonne fiche.
+La biblio a **deux types** de contenu :
 
-**Avant de publier**, vérifie : chaque affirmation a une **source** ou un **tag** ; chaque **lien
-est ouvert et teste 200** ; **fait ≠ analyse** ; **français avec accents** ; acronymes définis à la
-première occurrence (MOFCOM, NDRC, NPU…) ; source **primaire** (doc/acteur d'origine) distinguée de
-la **presse** (secondaire). Voir les règles du [`README`](README.md).
+- **Actualités** — l'actu IA qu'on *vérifie* : une question, chaque affirmation **sourcée + taguée**.
+- **Ressources** — ce qu'on *partage* (guide, article, vidéo, outil) : on **résume + attribue**, sans tag de vérité (on ne fact-checke pas un avis).
+
+Copie le bloc qui correspond dans un nouveau fichier, remplace le contenu entre crochets, puis
+ajoute-le à la liste de la page correspondante.
+
+---
+
+## Modèle d'actualité (fact-check)
+
+Nouveau fichier `fiches/mon-sujet.md` (minuscules-avec-tirets), puis ajoute-le à
+[`actualites.md`]({{ '/actualites.html' | relative_url }}).
+
+**Avant de publier** : chaque affirmation a une **source** ou un **tag** ; chaque **lien testé (200)** ;
+**fait ≠ analyse** ; **accents FR** ; acronymes définis ; **source primaire** (doc/acteur) distinguée
+de la **presse**. Voir les [Règles]({{ '/regles.html' | relative_url }}).
 
 ````markdown
 ---
-title: [Titre court de la fiche]
-parent: Fiches
-nav_order: [numéro d'ordre dans la liste des fiches]
+title: [Titre — de préférence une question]
+parent: Actualités
+nav_order: [ordre dans la liste]
 ---
 
-# [Titre court de la fiche — de préférence une question]
+# [Titre — de préférence une question]
 
-> ⚠️ **Brouillon — à vérifier.** Retire cet encadré quand la fiche est solide et sourcée.
-> (Quand elle est vérifiée, remplace-le par : « ✅ Fiche vérifiée le AAAA-MM-JJ, liens testés. »)
+> ⚠️ **Brouillon — à vérifier.** Retire l'encadré une fois sourcé.
+> (Vérifiée → « ✅ Fiche vérifiée le AAAA-MM-JJ, liens testés. »)
 
 ## La question
-[La question à laquelle la fiche répond, en une ligne.]
+[Une ligne.]
 
 ## Réponse courte
-[TL;DR en 2-3 phrases. Taguer 🔵 si c'est une analyse. Conditionnel si rien n'est acté.]
+[TL;DR 2-3 phrases. Tag 🔵 si c'est une analyse. Conditionnel si rien n'est acté.]
 
 ## Ce qui est avancé (et notre degré de confiance)
-[Une ligne par affirmation. Chaque ligne a une source OU un tag ⛔/🟠/🔵 explicite.]
-
 | Affirmation | Confiance | Source |
 |---|---|---|
 | [affirmation 1] | ✅ confirmé | [média + lien vérifié] |
-| [affirmation 2] | 🟡 probable | [lien] |
-| [affirmation 3] | ⛔ à vérifier | [à sourcer] |
-
-## Autres faits liés — mais hors-sujet *(optionnel)*
-[Quand un récit agrège des faits sans rapport : les lister, tagués, en disant POURQUOI c'est
-hors-sujet. Dé-relier vaut autant que sourcer.]
-
-| Affirmation | Confiance | Pourquoi c'est hors-sujet | Source |
-|---|---|---|---|
-| [fait réel mais sans rapport] | ✅ confirmé | [raison] | [lien] |
-
-## Corrections apportées *(optionnel)*
-[Erreurs d'un récit / d'une IA à ne pas reproduire : orthographe, attribution, date, chiffre…]
-
-- ✅ [correction 1]
+| [affirmation 2] | ⛔ à vérifier | [à sourcer] |
 
 ## Analyse
-[Ce qu'on en pense — bien séparé des faits. Tag 🔵. Ce qu'aucune source n'établit reste une opinion.]
+[🔵 Ce qu'on en pense, bien séparé des faits.]
 
 ## Sources
-[Sources vérifiées, une par ligne : média (date), titre, et lien testé (HTTP 200). Préciser
-« reprise de X » si ce n'est pas une source indépendante. Le doc officiel, s'il n'est pas public,
-se signale comme tel.]
-
-- [Média (AAAA-MM-JJ), *Titre* : <https://…>]
+- [Média (AAAA-MM-JJ), *Titre* : <https://…>] — préciser « reprise de X » si pas indépendant.
 
 ## Historique
 - [AAAA-MM-JJ] — [ce qui a changé]
 ````
 
-Niveaux de confiance : ✅ confirmé · 🟡 probable · 🟠 rumeur · 🔵 spéculation · ⛔ à vérifier.
+*Optionnel : si un récit mélange des faits sans rapport, ajoute une section « Autres faits —
+hors-sujet » qui les tague et explique pourquoi c'est hors-sujet (dé-relier vaut autant que sourcer).*
+
+---
+
+## Modèle de ressource (guide / lien partagé)
+
+Nouveau fichier `ressources/mon-sujet.md`, puis ajoute-le à
+[`ressources.md`]({{ '/ressources.html' | relative_url }}). On **ne fact-checke pas** un avis : on
+**résume**, on **attribue**, on ajoute **notre note**, et on **vérifie que le lien fonctionne**.
+
+````markdown
+---
+title: [Titre — Auteur]
+parent: Ressources
+nav_order: [ordre]
+---
+
+# [Titre — Auteur]
+
+> 🔵 **Ressource (guide / opinion).** Conseils de l'auteur, pas des faits à vérifier.
+
+| | |
+|---|---|
+| **Type** | [article / vidéo / thread / guide / outil] |
+| **Auteur** | [qui l'a écrit / dit] |
+| **Source** | [média + lien vérifié] |
+| **Sujet** | [en une ligne] |
+
+## En bref
+- [point clé 1]
+- [point clé 2]
+
+## Notre note
+🔵 [pourquoi c'est utile, à qui, réserves éventuelles…]
+
+## Historique
+- [AAAA-MM-JJ] — Ajout.
+````
+
+---
+
+Niveaux de confiance (actualités) : ✅ confirmé · 🟡 probable · 🟠 rumeur · 🔵 spéculation · ⛔ à vérifier.
 Règle d'or : **dans le doute, on descend d'un cran.**

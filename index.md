@@ -9,7 +9,8 @@ nav_order: 1
 Veille et **fact-checking** sur l'IA — chaque affirmation avec sa **source** et son **niveau de confiance**. L'antidote au « une IA a dit que… ».
 {: .fs-6 .fw-300 }
 
-[Parcourir les fiches]({{ '/fiches.html' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Actualités]({{ '/actualites.html' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Ressources]({{ '/ressources.html' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Les règles]({{ '/regles.html' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
@@ -21,6 +22,7 @@ Veille et **fact-checking** sur l'IA — chaque affirmation avec sa **source** e
    (✅ confirmé · 🟡 probable · 🟠 rumeur · 🔵 spéculation · ⛔ à vérifier), le **fait** séparé de l'**analyse**.
 3. **On partage le lien de la fiche** dans le groupe. Réponse sourcée, lisible sur mobile, corrigeable en un clic.
 
-Utilise la **navigation** à gauche ou la **recherche** en haut pour trouver une fiche.
+**Actualités** = l'actu qu'on vérifie · **Ressources** = ce qu'on partage (guides, liens, outils).
+Utilise la **navigation** à gauche ou la **recherche** en haut.
 
 > Prototype partagé pour notre groupe. On structure nos découvertes petit à petit.

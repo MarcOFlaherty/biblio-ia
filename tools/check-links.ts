@@ -72,8 +72,10 @@ async function check(url: string): Promise<{ status: string; ok: boolean }> {
   const opts = { redirect: 'follow' as const, headers: { 'user-agent': UA }, signal: ctrl.signal };
   try {
     let res = await fetch(url, { method: 'HEAD', ...opts });
-    // Certains serveurs refusent HEAD → retenter en GET.
-    if (res.status === 405 || res.status === 501 || res.status === 403) {
+    // Certains serveurs répondent mal au HEAD — 405/501/403, et parfois un 404 trompeur
+    // (thenextweb.com renvoie 404 en HEAD mais 200 en GET). Toute réponse non-OK est donc
+    // reconfirmée en GET avant de déclarer un lien mort.
+    if (!(res.status >= 200 && res.status < 400)) {
       res = await fetch(url, { method: 'GET', ...opts });
     }
     return { status: String(res.status), ok: res.status >= 200 && res.status < 400 };

@@ -38,6 +38,7 @@ exclude:
   - conductor/
   - tools/
   - README.md
+  - CLAUDE.md
   - LICENSE
   - .gitignore
   - public/

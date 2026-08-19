@@ -55,12 +55,17 @@ n'y a aucune nuance à faire — et c'est le point le plus fort de la chronique.
 | Il est **mis en avant** (listé en tête des « Generalist models », avant Mistral Large 3) | ✅ confirmé | [Catalogue Mistral](https://docs.mistral.ai/getting-started/models/models_overview/) |
 | Citation du CTO **Timothée Lacroix** : « *It's a great model. Everyone loves it. It's open weight, so there was no good reason for us not to do it* » | ✅ confirmé (traduction fidèle) — *précision : il est **cofondateur ET** CTO* | [VentureBeat, 11/08 (archive)](https://web.archive.org/web/20260812115917/https://venturebeat.com/infrastructure/mistral-ai-wants-to-build-1-gigawatt-of-european-compute-by-2030-and-lock-in-customers-now) |
 | Les recrutements penchent vers le déploiement : sur **163 postes ouverts**, **58 en « Solutions »** et 13 en « Business », contre **11 en « Science »** ; 11 intitulés « Forward Deployed » | ✅ confirmé (état au 17/08) | [Job board Mistral](https://jobs.ashbyhq.com/mistral.ai) |
-| …et que la page carrières ressemblait « **autrefois** » à celle d'un laboratoire | 🟠 non démontré — aucune comparaison historique fournie ; la photo actuelle ne prouve pas la trajectoire | — |
+| …et que la page carrières ressemblait « **autrefois** » à celle d'un laboratoire | ✅ **mesuré** (l'auteur ne le prouve pas, mais c'est vérifiable) : l'intitulé « Forward Deployed » **n'existait pas** avant l'été 2025 — **0** poste sur 28 (juil. 2024), **0** sur 51 (avr. 2025), **5** sur 67 (août 2025), **11** sur 163 aujourd'hui | [archives du job board (Lever), avr. 2025](https://web.archive.org/web/20250403213855id_/https://jobs.lever.co/mistral) · [août 2025](https://web.archive.org/web/20250807224411id_/https://jobs.lever.co/mistral) |
 | **Contrats pluriannuels** de capacité de calcul (« European Compute Units », engagements ~5 ans) | ✅ confirmé | [Annonce Mistral, 11/08](https://mistral.ai/news/regional-inference-open-models-new-compute/) |
 | Objectif **1 GW en Europe d'ici 2030** | 🟡 objectif annoncé — formulation officielle « **jusqu'à** 1 GW », avec un jalon de 200 MW fin 2027 ; annoncé dès le **28 mai**, pas le 11 août | [VentureBeat (archive)](https://web.archive.org/web/20260812115917/https://venturebeat.com/infrastructure/mistral-ai-wants-to-build-1-gigawatt-of-european-compute-by-2030-and-lock-in-customers-now) |
 | **Microsoft loue de la capacité chez Mistral** | ✅ confirmé — et **le sens n'est pas inversé** : « *Microsoft will leverage Mistral's expanded Europe-based GPU infrastructure* », « *multibillion dollar commitment from Microsoft* » | [Communiqué Microsoft, 21/07](https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/) |
 | **~1 milliard de revenus** visé en 2026 | 🟡 objectif déclaré (Arthur Mensch, janv. 2026) ; **devise ambiguë** selon les reprises (euros / dollars) | reprises presse |
 | « **3 milliards de dollars** » levés en 3 ans | 🟠 **sous-estimé** — ~4 Md$ au total selon PitchBook (capital + ~830 M€ de dette bancaire en 2026) | [VentureBeat (archive)](https://web.archive.org/web/20260812115917/https://venturebeat.com/infrastructure/mistral-ai-wants-to-build-1-gigawatt-of-european-compute-by-2030-and-lock-in-customers-now) |
+
+> ⚠️ *Sur la trajectoire des recrutements* : la mesure porte sur les **intitulés de poste**, seule
+> grandeur comparable dans le temps (Mistral a changé d'outil de recrutement fin 2025, et les
+> catégories « Solutions » / « Science » des deux outils ne recouvrent pas la même chose). La
+> tendance est robuste ; les pourcentages par département ne le sont pas.
 
 > *MoE (mixture of experts)* : le modèle n'active qu'une fraction de ses « experts » par token.
 > *MLA (multi-head latent attention)* : mécanisme d'attention compressée introduit par DeepSeek.
@@ -127,11 +132,15 @@ Sources vérifiées (liens testés le 2026-08-17) :
 - Microsoft (21/07/2026), *Microsoft and Mistral expand strategic partnership…* : <https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/>
 - VentureBeat (11/08/2026), Michael Nuñez, *Mistral AI wants to build 1 gigawatt of European compute by 2030* — **archive Wayback** (l'original renvoie une erreur 429) : <https://web.archive.org/web/20260812115917/https://venturebeat.com/infrastructure/mistral-ai-wants-to-build-1-gigawatt-of-european-compute-by-2030-and-lock-in-customers-now>
 - Job board public de Mistral (163 postes ouverts au 17/08) : <https://jobs.ashbyhq.com/mistral.ai>
+- Archives du job board de Mistral (ancien outil, rendu côté serveur — pour mesurer l'évolution) : <https://web.archive.org/web/20240719201340id_/https://jobs.lever.co/mistral> (juil. 2024) · <https://web.archive.org/web/20250403213855id_/https://jobs.lever.co/mistral> (avr. 2025) · <https://web.archive.org/web/20250807224411id_/https://jobs.lever.co/mistral> (août 2025)
 
 ## Historique
 
 - **2026-08-17** — Création. Fact-check du socle factuel d'une **tribune d'opinion** : chiffres
   d'architecture vérifiés sur les fichiers de configuration officiels, hébergement de GLM 5.2
   confirmé par la documentation de Mistral, partenariat Microsoft confirmé par Microsoft. Trois
-  imprécisions signalées (« ligne par ligne », « désormais » sur les recrutements, montant levé) et
-  trois omissions de contexte ajoutées (Kimi K2, pratique des hyperscalers, publications 2026).
+  imprécisions signalées (« ligne par ligne », montant levé) et trois omissions de contexte ajoutées
+  (Kimi K2, pratique des hyperscalers, publications 2026).
+- **2026-08-17** — Révision : le « autrefois » sur les recrutements, d'abord classé *non démontré*,
+  devient **mesuré** grâce aux archives de l'ancien job board (l'intitulé « Forward Deployed »
+  apparaît entre avril et août 2025). Réserve méthodologique ajoutée sur la comparabilité des catégories.

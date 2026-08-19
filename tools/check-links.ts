@@ -97,7 +97,8 @@ console.log(`🔗 Vérification de ${urls.size} lien(s) dans les contenus…\n`)
 const results: Result[] = [];
 for (const [url, fiche] of urls) {
   const { status, ok } = await check(url);
-  const manual = !ok && hostBlocksBots(url);
+  // Un timeout ne prouve PAS qu'un lien est mort (archive.org est souvent lent) → vérif manuelle.
+  const manual = !ok && (hostBlocksBots(url) || status === 'timeout');
   results.push({ url, fiche, status, ok, manual });
   console.log(`${ok ? '✅' : manual ? '🟡' : '❌'} [${status}] ${url}  (${fiche})`);
 }
@@ -111,7 +112,7 @@ console.log(
 );
 if (manual.length) {
   console.log(
-    `🟡 À vérifier à la main (l'hôte bloque les robots) :\n` +
+    `🟡 À vérifier à la main (hôte qui bloque les robots, ou trop lent) :\n` +
       manual.map((r) => `   ${r.url}  (${r.fiche})`).join('\n'),
   );
 }
